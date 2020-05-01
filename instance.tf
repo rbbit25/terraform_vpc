@@ -5,11 +5,5 @@ resource "aws_instance" "my_new_instance" {
   security_groups = ["${aws_security_group.sec_task3.id}"]
   subnet_id = "${aws_subnet.public-subnet-1.id}"
   user_data = "${file("httpd-setup.sh")}"
-  tags = {
-    Name = "Task3"
-    Enviroment = "${var.Environment}"
-    Department = "${var.Department}"
-    Team = "${var.Team}"
-    Created_by = "${var.Created_by}"
-  }
+  tags = "${var.tags}"
 }

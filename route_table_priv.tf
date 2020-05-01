@@ -6,13 +6,7 @@ resource "aws_route_table" "route_task_private" {
         gateway_id = "${aws_nat_gateway.task_nat_gw.id}"
     }
 
-    tags {
-        Name = "private_Route_Table"
-        Enviroment = "${var.Environment}"
-        Department = "${var.Department}"
-        Team = "${var.Team}"
-        Created_by = "${var.Created_by}"
-    }
+    tags = "${var.tags}"
 }
 
 resource "aws_route_table_association" "priv_subnet_1_route_assoc" {

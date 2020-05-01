@@ -12,37 +12,37 @@ variable "amis" {
 
 variable "vpc_cidr" {
     description = "CIDR for the whole VPC"
-    default = "10.0.0.0/16"
+
 }
 
 variable "public_subnet_1_cidr" {
     description = "CIDR for the Public Subnet 1"
-    default = "10.0.1.0/24"
+   
 }
 
 variable "public_subnet_2_cidr" {
     description = "CIDR for the Public Subnet 2"
-    default = "10.0.2.0/24"
+   
 }
 
 variable "public_subnet_3_cidr" {
     description = "CIDR for the Public Subnet 3"
-    default = "10.0.3.0/24"
+   
 }
 
 variable "private_subnet_1_cidr" {
     description = "CIDR for the Private Subnet 1"
-    default = "10.0.11.0/24"
+
 }
 
 variable "private_subnet_2_cidr" {
     description = "CIDR for the Private Subnet 2"
-    default = "10.0.12.0/24"
+    
 }
 
 variable "private_subnet_3_cidr" {
     description = "CIDR for the Private Subnet 3"
-    default = "10.0.13.0/24"
+  
 }
 
 
@@ -56,22 +56,12 @@ variable "ami" {
   default = "ami-0323c3dd2da7fb37d"
 }
 
-variable "Environment" {
-    default = "Dev"
-    description = "Enviroment"
+variable "tags" {
+  type = "map"
 }
 
-variable "Department" {
-    default = "IT"
-    description = "deparment"
-}
-
-variable "Team" {
-    default = "Infrastructure"
-    description = "team"
-}
-
-variable "Created_by" {
-    default = "rbbIT"
-    description = "created by"
-}
+variable "region" {}
+variable "region_name" {}
+variable "az1" {}
+variable "az2" {}
+variable "az3" {}

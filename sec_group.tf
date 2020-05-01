@@ -26,11 +26,5 @@ resource "aws_security_group" "sec_task3" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = {
-    Name = "sec_task3"
-    Enviroment = "${var.Environment}"
-    Department = "${var.Department}"
-    Team = "${var.Team}"
-    Created_by = "${var.Created_by}"
-  }
+  tags = "${var.tags}"
 }

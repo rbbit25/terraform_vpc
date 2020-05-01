@@ -28,6 +28,9 @@ output "private_subnet_id_2" {
 value = "${aws_subnet.private-subnet-2.id}" 
 }
 
+output "region" {
+  value = "${var.region}         ${var.region_name}"
+}
 output "private_subnet_id_3" { 
 value = "${aws_subnet.private-subnet-3.id}" 
 }
@@ -39,4 +42,8 @@ value = "${aws_internet_gateway.task_igw.id}"
 
 output "natgw_id" { 
 value = "${aws_nat_gateway.task_nat_gw.id}" 
+}
+
+output "Tags" {
+  value = "${var.tags}"
 }

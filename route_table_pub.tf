@@ -6,13 +6,7 @@ resource "aws_route_table" "route_task_public" {
         gateway_id = "${aws_internet_gateway.task_igw.id}"
     }
 
-    tags {
-        Name = "Public_Route_Table"
-        Enviroment = "${var.Environment}"
-        Department = "${var.Department}"
-        Team = "${var.Team}"
-        Created_by = "${var.Created_by}"
-    }
+    tags = "${var.tags}"
 }
 
 resource "aws_route_table_association" "pub_subnet_1_route_assoc" {
