@@ -1,7 +1,4 @@
-variable "aws_region" {
-    description = "EC2/VPC Region for the VPC"
-    default = "us-east-1"
-}
+
 
 variable "amis" {
     description = "AMIs by region"
