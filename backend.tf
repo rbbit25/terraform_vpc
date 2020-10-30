@@ -1,9 +1,7 @@
-terraform {
-  required_version = "0.11.14"
-  backend "s3" {
-    bucket = "state-class-rbbit"
-    key    = "path/to/my/key"
-    #dynamodb_table = "state_class"
-    region = "us-east-1"
-  }
-}
+terraform { 
+backend "s3" { 
+bucket = "alelade-rbbit-dev" 
+key = "vet/us-east-1/sharedtools/prod/infrastructure.tfstate" 
+region = "us-east-1" 
+  } 
+} 

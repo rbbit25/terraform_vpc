@@ -1,12 +1,5 @@
 
 
-variable "amis" {
-    description = "AMIs by region"
-    default = {
-        us-east-1 = "ami-0323c3dd2da7fb37d" # Amazon Linux 2 AMI
-    }
-}
-
 variable "vpc_cidr" {
     description = "CIDR for the whole VPC"
 
@@ -50,7 +43,7 @@ variable "ec2_instance_type" {
 
 variable "ami" {
   description = "ami_type"  
-  default = "ami-0323c3dd2da7fb37d"
+  default = "ami-06cf02a98a61f9f5e"     #Centos 7 AMI
 }
 
 variable "tags" {
@@ -62,3 +55,4 @@ variable "region_name" {}
 variable "az1" {}
 variable "az2" {}
 variable "az3" {}
+variable "environment" {}

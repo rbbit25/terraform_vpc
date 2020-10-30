@@ -1,3 +1,15 @@
+environment = "dev" 
+
+s3_bucket = "alelade-rbbit-dev" #Will be used to set backend.tf 
+
+s3_folder_project = "vet" #Will be used to set backend.tf 
+
+s3_folder_region = "us-east-1" #Will be used to set backend.tf 
+
+s3_folder_type = "sharedtools" #Will be used to set backend.tf 
+
+s3_tfstate_file = "infrastructure.tfstate" #Will be used to set backend.tf 
+
 region                      =   "us-east-1"
 region_name                 =   "N. Virginia"
 vpc_cidr                    =   "192.168.0.0/16"
@@ -16,10 +28,10 @@ private_subnet_3_cidr             =   "192.168.12.0/24"
 
 
 tags    =   {
-    Name                    =   "VPC_Project"
+    Name                    =   "Dev"
     Environment             =   "Dev"
     Team                    =   "DevOps"
-    Created_by              =   "rbbit"
+    Created_by              =   "rburak"
     Department              =   "IT"
 
 }
